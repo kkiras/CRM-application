@@ -6,18 +6,18 @@ namespace Admin.CustomerEdit
 {
     public class EditService : IEditService
     {
-        public bool EditCustomerInteractive(IList<CustomerModel> customers)
+        public CustomerModel? EditCustomerInteractive(IList<CustomerModel> customers)
         {
             if (customers.Count == 0)
             {
                 Console.WriteLine("Không có customer nào.");
-                return false;
+                return null;
             }
 
             var selectedIndex = PromptCustomerSelection(customers);
             if (selectedIndex < 0)
             {
-                return false;
+                return null;
             }
 
             var customer = customers[selectedIndex];
@@ -27,7 +27,7 @@ namespace Admin.CustomerEdit
             customer.Email = PromptEmailField("Email", customer.Email);
             customer.CreditLimit = PromptCreditLimit(customer.CreditLimit);
 
-            return true;
+            return customer;
         }
 
         private static int PromptCustomerSelection(IList<CustomerModel> customers)

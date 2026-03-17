@@ -87,32 +87,50 @@ namespace Admin.App
 
         private static void CommitCustomerData()
         {
+            CommitCustomerData(null);
+        }
+
+        private static void CommitCustomerData(CustomerModel changedCustomer)
+        {
             var write = new WriteService();
             var file = Path.Combine(
                 Directory.GetCurrentDirectory(),
                 "..", "..",
                 "testData", "text.json");
+
             write.Write(_customers, file);
 
-            string jsonParams = JsonSerializer.Serialize(_customers);
+            if (changedCustomer != null)
+            {
+                string jsonParams = JsonSerializer.Serialize(changedCustomer);
 
-            // _hook.CreateHook(
-            //     methodName: "After",
-            //     className: "CommitCustomerData",
-            //     parameters: new[] { jsonParams });
+                _hook.CreateHook(
+                    methodName: "After",
+                    className: "SendEmailToCustomer",
+                    parameters: new[] { jsonParams });
+
+                return;
+            }
+
+            string allCustomersJson = JsonSerializer.Serialize(_customers);
+
+            _hook.CreateHook(
+                methodName: "After",
+                className: "CommitCustomerData",
+                parameters: new[] { allCustomersJson });
         }
 
         private static void EditCustomer()
         {
             ReadCustomerData();
             var editService = new EditService();
-            var updated = editService.EditCustomerInteractive(_customers);
-            if (!updated)
+            var changedCustomer = editService.EditCustomerInteractive(_customers);
+            if (changedCustomer == null)
             {
                 return;
             }
 
-            CommitCustomerData();
+            CommitCustomerData(changedCustomer);
 
             Console.WriteLine("Cập nhật customer thành công.");
         }

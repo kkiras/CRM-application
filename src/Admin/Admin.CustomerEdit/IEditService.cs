@@ -5,6 +5,6 @@ namespace Admin.CustomerEdit
 {
     public interface IEditService
     {
-        bool EditCustomerInteractive(IList<CustomerModel> customers);
+        CustomerModel? EditCustomerInteractive(IList<CustomerModel> customers);
     }
 }

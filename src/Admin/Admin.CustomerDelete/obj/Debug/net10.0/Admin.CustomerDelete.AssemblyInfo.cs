@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Admin.CustomerDelete")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19748d66c00aa718257bb8caaf9b516ea055e3db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+579ba8785bc69ceccd5c7bf80d96503a27061810")]
 [assembly: System.Reflection.AssemblyProductAttribute("Admin.CustomerDelete")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Admin.CustomerDelete")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
