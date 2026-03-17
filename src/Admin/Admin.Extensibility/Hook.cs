@@ -54,26 +54,38 @@ namespace Admin.Extensibility
 
                 foreach (Type type in library.GetExportedTypes())
                 {
+                    // Bỏ qua interface và abstract class (không thể khởi tạo instance)
                     if (type.IsAbstract || type.IsInterface)
                         continue;
 
+                    // Tìm method có tên = methodName (vd: "After") 
+                    // Chỉ lấy method public instance
                     var method = type.GetMethod(
                         methodName,
                         BindingFlags.Public | BindingFlags.Instance);
 
+                    // Nếu class này không có method cần gọi → bỏ qua
                     if (method == null)
                         continue;
 
+                    // Lấy danh sách tham số của method
                     var methodParams = method.GetParameters();
+                    // Số lượng tham số được truyền vào từ Hook
                     int providedCount = parameters?.Length ?? 0;
 
+                    // Nếu số lượng param không khớp → bỏ qua 
+                    // (tránh gọi nhầm overload hoặc sai signature)
                     if (methodParams.Length != providedCount)
                         continue;
 
+                    // Tạo instance của class (vd: new SendEmailToCustomer())
                     var instance = Activator.CreateInstance(type);
+                    // Nếu tạo instance thất bại → bỏ qua
                     if (instance == null)
                         continue;
 
+                    // Gọi method thông qua reflection 
+                    // tương đương: instance.After(parameters...)
                     method.Invoke(instance, parameters);
                 }
             }
