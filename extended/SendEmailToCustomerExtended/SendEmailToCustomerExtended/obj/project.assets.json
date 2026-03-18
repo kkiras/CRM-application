@@ -69,6 +69,16 @@
             "rid": "win"
           }
         }
+      },
+      "Admin.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Admin.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Admin.Common.dll": {}
+        }
       }
     }
   },
@@ -211,10 +221,16 @@
         "system.security.cryptography.pkcs.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Admin.Common/1.0.0": {
+      "type": "project",
+      "path": "../../../src/Admin/Admin.Common/Admin.Common.csproj",
+      "msbuildProject": "../../../src/Admin/Admin.Common/Admin.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Admin.Common >= 1.0.0",
       "MailKit >= 4.15.1"
     ]
   },
@@ -244,7 +260,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\kkira\\Downloads\\Assignment 8\\Assignment 8\\CRM application\\src\\Admin\\Admin.Common\\Admin.Common.csproj": {
+              "projectPath": "C:\\Users\\kkira\\Downloads\\Assignment 8\\Assignment 8\\CRM application\\src\\Admin\\Admin.Common\\Admin.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

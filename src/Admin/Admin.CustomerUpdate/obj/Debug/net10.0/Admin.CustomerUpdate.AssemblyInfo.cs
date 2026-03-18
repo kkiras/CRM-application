@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Admin.CustomerUpdate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+579ba8785bc69ceccd5c7bf80d96503a27061810")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23d8f8405f89ce2351ed5d0ccfc6efd29415b8ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("Admin.CustomerUpdate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Admin.CustomerUpdate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

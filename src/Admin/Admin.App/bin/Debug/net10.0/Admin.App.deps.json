@@ -71,6 +71,9 @@
         }
       },
       "Admin.Extensibility/1.0.0": {
+        "dependencies": {
+          "Admin.Common": "1.0.0"
+        },
         "runtime": {
           "Admin.Extensibility.dll": {
             "assemblyVersion": "1.0.0.0",

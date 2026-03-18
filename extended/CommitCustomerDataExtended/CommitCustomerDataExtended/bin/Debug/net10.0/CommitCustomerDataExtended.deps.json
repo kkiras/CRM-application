@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v10.0": {
       "CommitCustomerDataExtended/1.0.0": {
+        "dependencies": {
+          "Admin.Common": "1.0.0"
+        },
         "runtime": {
           "CommitCustomerDataExtended.dll": {}
+        }
+      },
+      "Admin.Common/1.0.0": {
+        "runtime": {
+          "Admin.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "CommitCustomerDataExtended/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Admin.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

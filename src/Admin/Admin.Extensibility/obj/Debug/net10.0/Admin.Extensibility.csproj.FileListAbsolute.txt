@@ -12,11 +12,15 @@ C:\Users\kkira\Downloads\SAAD - Self learning\Assignment 8 preparation\3. Sample
 C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\bin\Debug\net10.0\Admin.Extensibility.deps.json
 C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\bin\Debug\net10.0\Admin.Extensibility.dll
 C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\bin\Debug\net10.0\Admin.Extensibility.pdb
+C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\bin\Debug\net10.0\Admin.Common.dll
+C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\bin\Debug\net10.0\Admin.Common.pdb
+C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\obj\Debug\net10.0\Admin.Extensibility.csproj.AssemblyReference.cache
 C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\obj\Debug\net10.0\Admin.Extensibility.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\obj\Debug\net10.0\Admin.Extensibility.AssemblyInfoInputs.cache
 C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\obj\Debug\net10.0\Admin.Extensibility.AssemblyInfo.cs
 C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\obj\Debug\net10.0\Admin.Extensibility.csproj.CoreCompileInputs.cache
 C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\obj\Debug\net10.0\Admin.Extensibility.sourcelink.json
+C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\obj\Debug\net10.0\Admin.Ex.60DA8C6D.Up2Date
 C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\obj\Debug\net10.0\Admin.Extensibility.dll
 C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\obj\Debug\net10.0\refint\Admin.Extensibility.dll
 C:\Users\kkira\Downloads\Assignment 8\Assignment 8\CRM application\src\Admin\Admin.Extensibility\obj\Debug\net10.0\Admin.Extensibility.pdb

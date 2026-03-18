@@ -17,6 +17,8 @@ namespace Admin.App
         static List<CustomerModel> _customers = new List<CustomerModel>();
         static Random _rnd = new Random();
         static Hook _hook = new Hook();
+        private static readonly StrategyResolver _strategyResolver = new StrategyResolver();
+        private static readonly AfterCommitContext _afterCommitContext = new AfterCommitContext();
 
         static void Main(string[] args)
         {
@@ -104,20 +106,24 @@ namespace Admin.App
             {
                 string jsonParams = JsonSerializer.Serialize(changedCustomer);
 
-                _hook.CreateHook(
-                    methodName: "After",
-                    className: "SendEmailToCustomer",
-                    parameters: new[] { jsonParams });
+                var strategy = _strategyResolver.Resolve("SendEmailToCustomer");
+                if (strategy != null)
+                {
+                    _afterCommitContext.SetStrategy(strategy);
+                    _afterCommitContext.Execute(jsonParams);
+                }
 
                 return;
             }
 
             string allCustomersJson = JsonSerializer.Serialize(_customers);
 
-            _hook.CreateHook(
-                methodName: "After",
-                className: "CommitCustomerData",
-                parameters: new[] { allCustomersJson });
+            var commitStrategy = _strategyResolver.Resolve("CommitCustomerData");
+            if (commitStrategy != null)
+            {
+                _afterCommitContext.SetStrategy(commitStrategy);
+                _afterCommitContext.Execute(allCustomersJson);
+            }
         }
 
         private static void EditCustomer()

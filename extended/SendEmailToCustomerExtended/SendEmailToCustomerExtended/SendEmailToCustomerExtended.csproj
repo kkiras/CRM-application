@@ -11,4 +11,8 @@
     <PackageReference Include="MailKit" Version="4.15.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Admin\Admin.Common\Admin.Common.csproj" />
+  </ItemGroup>
+
 </Project>

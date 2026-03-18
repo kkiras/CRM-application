@@ -67,6 +67,9 @@
       "Admin.Extensibility/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Admin.Common": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Admin.Extensibility.dll": {}
         },

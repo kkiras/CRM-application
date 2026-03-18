@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "Admin.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Admin.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Admin.Common.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Admin.Common/1.0.0": {
+      "type": "project",
+      "path": "../../../src/Admin/Admin.Common/Admin.Common.csproj",
+      "msbuildProject": "../../../src/Admin/Admin.Common/Admin.Common.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "Admin.Common >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\kkira\\.nuget\\packages\\": {}
@@ -13,25 +32,31 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kkira\\Downloads\\SAAD - Self learning\\Assignment 8 preparation\\3. Sample Projects\\software-architecture-by-example-master\\chapter-5-admin\\extended\\CommitCustomerDataExtended\\CommitCustomerDataExtended\\CommitCustomerDataExtended.csproj",
+      "projectUniqueName": "C:\\Users\\kkira\\Downloads\\Assignment 8\\Assignment 8\\CRM application\\extended\\CommitCustomerDataExtended\\CommitCustomerDataExtended\\CommitCustomerDataExtended.csproj",
       "projectName": "CommitCustomerDataExtended",
-      "projectPath": "C:\\Users\\kkira\\Downloads\\SAAD - Self learning\\Assignment 8 preparation\\3. Sample Projects\\software-architecture-by-example-master\\chapter-5-admin\\extended\\CommitCustomerDataExtended\\CommitCustomerDataExtended\\CommitCustomerDataExtended.csproj",
+      "projectPath": "C:\\Users\\kkira\\Downloads\\Assignment 8\\Assignment 8\\CRM application\\extended\\CommitCustomerDataExtended\\CommitCustomerDataExtended\\CommitCustomerDataExtended.csproj",
       "packagesPath": "C:\\Users\\kkira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kkira\\Downloads\\SAAD - Self learning\\Assignment 8 preparation\\3. Sample Projects\\software-architecture-by-example-master\\chapter-5-admin\\extended\\CommitCustomerDataExtended\\CommitCustomerDataExtended\\obj\\",
+      "outputPath": "C:\\Users\\kkira\\Downloads\\Assignment 8\\Assignment 8\\CRM application\\extended\\CommitCustomerDataExtended\\CommitCustomerDataExtended\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kkira\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\kkira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\kkira\\Downloads\\Assignment 8\\Assignment 8\\CRM application\\src\\Admin\\Admin.Common\\Admin.Common.csproj": {
+              "projectPath": "C:\\Users\\kkira\\Downloads\\Assignment 8\\Assignment 8\\CRM application\\src\\Admin\\Admin.Common\\Admin.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -44,7 +69,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0": {
@@ -65,7 +90,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
